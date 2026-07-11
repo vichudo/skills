@@ -1,16 +1,25 @@
 #!/usr/bin/env bash
-# Symlink published skills into ~/.claude/skills (or a target passed as $1)
-# so Claude Code picks them up without installing the plugin.
-# Skips skills/in-progress and skills/deprecated.
+# Symlink skills into ~/.claude/skills (or a target passed as an argument) so
+# Claude Code picks them up straight from the repo — edits are live, no
+# reinstall. Pass --drafts to also link skills/in-progress for testing new
+# skills before they graduate. Deprecated skills are never linked.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-target="${1:-$HOME/.claude/skills}"
+drafts=false
+target="$HOME/.claude/skills"
+for arg in "$@"; do
+  case "$arg" in
+    --drafts) drafts=true ;;
+    *) target="$arg" ;;
+  esac
+done
 mkdir -p "$target"
 
-find skills -mindepth 2 -maxdepth 2 -type d \
-  ! -path 'skills/in-progress/*' \
-  ! -path 'skills/deprecated/*' |
+exclude=( ! -path 'skills/deprecated/*' )
+$drafts || exclude+=( ! -path 'skills/in-progress/*' )
+
+find skills -mindepth 2 -maxdepth 2 -type d "${exclude[@]}" |
 while read -r dir; do
   [ -f "$dir/SKILL.md" ] || continue
   name="$(basename "$dir")"

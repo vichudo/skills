@@ -70,8 +70,17 @@ Instructions for the agent go here.
 3. Register it in `.claude-plugin/plugin.json` under `"skills"`.
 4. Optionally add a human-facing page under `docs/<category>/<skill-name>.md`.
 
-## Local usage
+## Local usage & testing
 
 - `scripts/list-skills.sh` — list every skill in the repo.
 - `scripts/link-skills.sh` — symlink published skills into `~/.claude/skills`
-  so Claude Code picks them up without installing the plugin.
+  so Claude Code loads them straight from the repo. Edits are live (symlinks,
+  not copies); a brand-new skill registers on the next session.
+- `scripts/link-skills.sh --drafts` — also link `skills/in-progress/`, for
+  testing new skills before they graduate to a category.
+- `claude plugin validate .` — check the plugin and marketplace manifests.
+
+On the machine holding this repo, prefer the symlinks over `npx skills add` —
+an installed copy and a linked copy of the same skill would collide. To test
+the exact plugin install path end-to-end, add the repo as a local marketplace:
+`claude plugin marketplace add ~/Documents/Github/skills`.
