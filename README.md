@@ -3,6 +3,27 @@
 A personal collection of agent skills for Claude Code, organized by category and
 installable as a Claude Code plugin.
 
+## Install
+
+### Any agent, via [skills.sh](https://skills.sh)
+
+```
+npx skills add vichudo/skills
+```
+
+Works for Claude Code, Cursor, Codex, and other supported agents. Update later
+with `npx skills update`.
+
+### Claude Code, as a plugin
+
+```
+/plugin marketplace add vichudo/skills
+/plugin install vichudo-skills@vichudo
+```
+
+Skills arrive namespaced (e.g. `/vichudo-skills:handoff`). New versions ship on
+every commit to `main`; update with `/plugin marketplace update vichudo`.
+
 ## Repo layout
 
 ```

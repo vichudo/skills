@@ -1,0 +1,15 @@
+{
+  "name": "vichudo",
+  "description": "Vicente González's agent skills for Claude Code.",
+  "owner": {
+    "name": "Vicente González",
+    "email": "vichudo@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "vichudo-skills",
+      "source": "./",
+      "description": "Personal collection of agent skills for Claude Code."
+    }
+  ]
+}
