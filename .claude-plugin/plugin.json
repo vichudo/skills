@@ -3,6 +3,7 @@
   "description": "Personal collection of agent skills for Claude Code.",
   "version": "0.0.1",
   "skills": [
-    "./skills/productivity/handoff"
+    "./skills/productivity/handoff",
+    "./skills/personal/new-branch-pr"
   ]
 }
