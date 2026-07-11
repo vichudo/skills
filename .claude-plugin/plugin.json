@@ -1,0 +1,6 @@
+{
+  "name": "vichudo-skills",
+  "description": "Personal collection of agent skills for Claude Code.",
+  "version": "0.0.1",
+  "skills": []
+}
