@@ -17,6 +17,8 @@ published as a plugin via `.claude-plugin/plugin.json`.
 ## Lifecycle
 
 - New skills start in `skills/in-progress/` and are not listed in the manifest.
+  Test them locally with `scripts/link-skills.sh --drafts` (symlinks — edits
+  are live; new skills register on the next session).
 - Published skills live in a category folder (`engineering`, `productivity`,
   `misc`, `personal`) and MUST be listed in `.claude-plugin/plugin.json`.
 - Retired skills move to `skills/deprecated/` and are removed from the manifest.
