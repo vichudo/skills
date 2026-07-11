@@ -1,0 +1,10 @@
+{
+  "name": "vichudo-skills",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Personal collection of agent skills for Claude Code.",
+  "scripts": {
+    "list": "bash scripts/list-skills.sh",
+    "link": "bash scripts/link-skills.sh"
+  }
+}
