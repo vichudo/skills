@@ -78,6 +78,10 @@ Instructions for the agent go here.
   not copies); a brand-new skill registers on the next session.
 - `scripts/link-skills.sh --drafts` — also link `skills/in-progress/`, for
   testing new skills before they graduate to a category.
+- `scripts/link-skills.sh --agents` — link into the shared `~/.agents/skills`
+  store and point every agent installed on this machine (Claude Code, Codex,
+  Cursor, Gemini) at it, the same layout `npx skills add` uses. Re-run after
+  adding a skill; edits to existing ones need no re-run.
 - `claude plugin validate .` — check the plugin and marketplace manifests.
 
 On the machine holding this repo, prefer the symlinks over `npx skills add` —

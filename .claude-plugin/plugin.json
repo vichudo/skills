@@ -6,6 +6,7 @@
     "email": "vichudo@gmail.com"
   },
   "skills": [
+    "./skills/productivity/phrase-goal",
     "./skills/productivity/handoff",
     "./skills/personal/new-branch-pr"
   ]
