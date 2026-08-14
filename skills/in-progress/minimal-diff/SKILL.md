@@ -56,6 +56,11 @@ Lines are the proxy the reader sees; **net new concepts** are what you actually 
 - **Never trade correctness for size** — error paths, honest types, and existing tests stay. Deleting a test to shrink a diff is a defect, not an optimization.
 - **Never widen the blast radius** — bugs, TODOs, and ugliness found outside the change are reported, not fixed here.
 
+## Done check
+
+- For an existing diff: The process is DONE when the length of the necessary code diff to satisfy the same purpose is the canonical minimum while maximizing best and latest practices for the scope, beautifully architected.
+- For a new diff: The process is DONE when the harness-gathered context provides the maximum value such that the output is worth of the MINIMUM length of the necessary code diff, on the best and latest practices for the scope, beautifully architected
+
 ## Report
 
 Close with the shape of the change, not a narrative: files touched · net lines (+/−) · new concepts introduced · what was reused instead of written · what was deleted · anything the constraints forced you to keep. Then any out-of-scope findings, one line each.
