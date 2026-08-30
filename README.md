@@ -80,7 +80,7 @@ Instructions for the agent go here.
   testing new skills before they graduate to a category.
 - `scripts/link-skills.sh --agents` — link into the shared `~/.agents/skills`
   store and point every agent installed on this machine (Claude Code, Codex,
-  Cursor, Gemini) at it, the same layout `npx skills add` uses. Re-run after
+  Cursor, Gemini, Grok) at it, the same layout `npx skills add` uses. Re-run after
   adding a skill; edits to existing ones need no re-run.
 - `claude plugin validate .` — check the plugin and marketplace manifests.
 

@@ -6,8 +6,13 @@
     "email": "vichudo@gmail.com"
   },
   "skills": [
-    "./skills/productivity/phrase-goal",
+    "./skills/personal/phrase-goal",
     "./skills/productivity/handoff",
+    "./skills/productivity/resume-session",
+    "./skills/productivity/resume-claude",
+    "./skills/productivity/resume-codex",
+    "./skills/productivity/resume-cursor",
+    "./skills/productivity/resume-grok",
     "./skills/personal/new-branch-pr"
   ]
 }
