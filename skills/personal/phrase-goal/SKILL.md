@@ -6,7 +6,9 @@ argument-hint: "[raw intentions and deadline]"
 
 # phrase-goal
 
-Produce **one sentence**: `By [deadline], [quantified primary outcome as accomplished fact], [produced with / supported by / coordinated through] [enablers].`
+Produce **one sentence**: `[[condition the goal assumes],] By [deadline], [quantified primary outcome as accomplished fact], [produced with / supported by / coordinated through] [enablers].`
+
+The leading condition appears only when an outside party's action is load-bearing (axiom 11); nothing else may precede the deadline.
 
 If the raw material or the deadline is missing, ask for it before writing.
 
@@ -14,7 +16,7 @@ If the raw material or the deadline is missing, ask for it before writing.
 
 1. **One sentence, one goal** — if it cannot be said in one breath it is a plan, not a goal. Compression forces prioritization.
 2. **Accomplished fact** — write the answer to "what happened by the deadline?", not a to-do or a wish. ❌ "Try to write the report chapters" · ✅ "70% of the report chapters are drafted and reviewed".
-3. **Time-bound at the front** — the deadline anchors the sentence ("By Friday, ..."). No boundary, no falsifiability.
+3. **Time-bound at the front** — the deadline anchors the sentence ("By Friday, ..."); only a leading condition (axiom 11) may precede it. No boundary, no falsifiability.
 4. **Measurable or it didn't happen** — every claim verifiable by a number or a yes/no (70%, one each, decided). "Improve", "work on", "advance" are banned unless bound to a countable artifact.
 5. **Connected, not conjoined** — a goal is not `A ∧ B ∧ C`. Parallel workstreams attach to the primary outcome causally or instrumentally ("produced with...", "coordinated through..."). The reader must perceive one system, not a list.
 6. **Maximize signal/noise** — delete intensifiers, decorations, and filler ("decisively", "successfully", "in order to"). If removing a word loses no meaning, remove it.
@@ -22,16 +24,17 @@ If the raw material or the deadline is missing, ask for it before writing.
 8. **Unambiguous** — any two readers extract identical success criteria. Name concrete artifacts and people, not categories.
 9. **Realistic threshold over heroic totality** — an explicit 70% beats an implicit 100% that will be silently missed. Honest thresholds are measurable; heroism is not.
 10. **The primary outcome dominates** — grammar mirrors hierarchy: main clause carries the mission-critical result, subordinate clauses carry enablers.
+11. **Only what we control** — the outcome must be one our own actions produce. If it hinges on someone else's decision (a client signs, users convert, a reviewer approves), move it downstream to what we deliver: ❌ "the contract is signed" · ✅ "the signed-ready contract is delivered and defended in the buyer's review". When the dependency is load-bearing and cannot be designed away, it goes in the frame as the condition the goal assumes — ✅ "Once the client signs on March 3, by March 28 the migration runs in their production tenant..." — never as work aimed at them (❌ "the client is chased weekly until they sign") and never left unwritten. The framing word is free ("Given...", "Once...", "With..."); the position is not. A broken condition renegotiates the goal instead of silently failing it. Moving downstream is not retreating into effort — axiom 2 still holds.
 
 ## Procedure
 
 1. **Collect** every raw intention and task.
 2. **Identify** the single primary outcome — the one that, if missed, makes the period a failure.
-3. **Quantify** it (percentage, count, binary state) at a realistic threshold.
+3. **Quantify** it (percentage, count, binary state) at a realistic threshold our own actions decide — if someone else's yes/no sets it, move the outcome downstream or state their action as the leading condition.
 4. **Subordinate** the remaining workstreams as instruments or context of that outcome.
 5. **Phrase** it as a retrospective declarative using the template.
 6. **Compress** — delete every word that survives without loss of meaning.
-7. **Test** — can a stranger grade this pass/fail on the deadline? If not, iterate from step 3.
+7. **Test** — can a stranger grade this pass/fail on the deadline, with the stated condition held and nothing else going our way? If not, iterate from step 3.
 
 ## Anti-patterns
 
@@ -43,6 +46,8 @@ If the raw material or the deadline is missing, ask for it before writing.
 | Unbounded goal | No deadline | Prefix with "By [date]" |
 | Heroic goal | Implicit 100% | Explicit realistic threshold |
 | Ambiguous goal | Two readers disagree on success | Name artifacts and counts |
+| Hostage goal | Success hinges on someone else's decision | Move the outcome downstream, or state their action as the leading condition |
+| Chasing goal | "Follow up until they...", "remind", "push" | Their action is the condition, not our task |
 
 ## Output
 
