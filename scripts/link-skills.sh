@@ -7,7 +7,7 @@
 #              graduate to a category
 #   --agents   link into the shared ~/.agents/skills store instead, then point
 #              every agent installed on this machine (Claude Code, Codex,
-#              Cursor, Gemini) at it — the layout `npx skills add` uses
+#              Cursor, Gemini, Grok) at it — the layout `npx skills add` uses
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
@@ -38,7 +38,7 @@ done < <(find skills -mindepth 2 -maxdepth 2 -type d "${exclude[@]}")
 $agents || exit 0
 
 # Fan the shared store out to every agent that already keeps a skills directory.
-for agent_dir in "$HOME"/.claude "$HOME"/.codex "$HOME"/.cursor "$HOME"/.gemini; do
+for agent_dir in "$HOME"/.claude "$HOME"/.codex "$HOME"/.cursor "$HOME"/.gemini "$HOME"/.grok; do
   [ -d "$agent_dir/skills" ] || continue
   for name in "${names[@]}"; do
     ln -sfn "../../.agents/skills/$name" "$agent_dir/skills/$name"
