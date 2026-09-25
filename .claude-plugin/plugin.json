@@ -8,6 +8,8 @@
   "skills": [
     "./skills/personal/phrase-goal",
     "./skills/productivity/handoff",
-    "./skills/personal/new-branch-pr"
+    "./skills/personal/new-branch-pr",
+    "./skills/engineering/minimal-diff",
+    "./skills/engineering/frontier-threejs"
   ]
 }
