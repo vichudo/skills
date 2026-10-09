@@ -72,16 +72,22 @@ Instructions for the agent go here.
 
 ## Local usage & testing
 
+```
+pnpm skills
+```
+
+Makes every skill in the repo — published, drafts, and those still on open
+PRs — available to every agent on this machine (Claude Code, Codex, Cursor,
+Gemini, Grok) through the shared `~/.agents/skills` store, the same layout
+`npx skills add` uses. Edits are live (symlinks, not copies); re-run it after
+adding, renaming, or deleting a skill, or when a PR merges, and the change
+registers on each agent's next session. Safe to re-run any time: it
+fast-forwards the checkout, keeps a detached checkout of each open PR from this
+repo under `.pr-worktrees/`, removes links left by renamed or deleted skills,
+and fails loudly if any agent can't resolve a skill. Without pnpm:
+`bash scripts/link-skills.sh`.
+
 - `scripts/list-skills.sh` — list every skill in the repo.
-- `scripts/link-skills.sh` — symlink published skills into `~/.claude/skills`
-  so Claude Code loads them straight from the repo. Edits are live (symlinks,
-  not copies); a brand-new skill registers on the next session.
-- `scripts/link-skills.sh --drafts` — also link `skills/in-progress/`, for
-  testing new skills before they graduate to a category.
-- `scripts/link-skills.sh --agents` — link into the shared `~/.agents/skills`
-  store and point every agent installed on this machine (Claude Code, Codex,
-  Cursor, Gemini) at it, the same layout `npx skills add` uses. Re-run after
-  adding a skill; edits to existing ones need no re-run.
 - `claude plugin validate .` — check the plugin and marketplace manifests.
 
 On the machine holding this repo, prefer the symlinks over `npx skills add` —
