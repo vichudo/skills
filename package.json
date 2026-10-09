@@ -5,6 +5,6 @@
   "description": "Personal collection of agent skills for Claude Code.",
   "scripts": {
     "list": "bash scripts/list-skills.sh",
-    "link": "bash scripts/link-skills.sh"
+    "skills": "bash scripts/link-skills.sh"
   }
 }
